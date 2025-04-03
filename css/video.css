@@ -1,12 +1,13 @@
 
-.options{
+.options {
 	padding: 10px;
 	border:2px solid blue;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
-.video{
+
+.video {
 	display: block;
 	width: 90%;
 	border: 2px solid black;
@@ -14,16 +15,18 @@
 	
 }
 
-figcaption{
+figcaption {
 	text-align: center;
 }
-.oldSchool{
+
+.oldSchool {
 	filter: grayscale(100%);
 	width:75%;
 	border:5px double grey;
 	border-radius:20px;
 }
-button{
+
+button {
 	margin-bottom: 5px;
 	flex-basis: 200px;
 	font-size:125%;

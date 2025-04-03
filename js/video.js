@@ -9,6 +9,7 @@ let muteButton = document.querySelector("#mute");
 let volumeSlider = document.querySelector("#slider");
 let oldSchoolButton = document.querySelector("#vintage");
 let originalButton = document.querySelector("#orig");
+let volumeText = document.querySelector("#volume");
 // Store video volume.
 let volume = 1; // 100% volume by default.
 // Track if video is playing.
@@ -50,6 +51,12 @@ function InitializeVideo() {
 	video.pause();
 	// Prevent video from looping.
 	video.removeAttribute('loop');
+	// Set the initial volume text.
+	volumeText.innerHTML = volume * 100 + "%"
+	// Output to console.
+	console.log("Good job opening the window");
+	console.log("Autoplay is set to false");
+	console.log("Loop is set to false");
 }
 
 // Plays the video.
@@ -100,11 +107,15 @@ function MuteVideo() {
 		video.muted = false;
 		// Update the text button
 		muteButton.innerHTML = "Mute";
+		// Log mute state.
+		console.log("Unmute");
 	} else {
 		// Mute the video.
 		video.muted = true;
 		// Update the text button
 		muteButton.innerHTML = "Unmute";
+		// Log mute state.
+		console.log("Mute");
 	}
 }
 
@@ -113,6 +124,8 @@ function UpdateVolume() {
 	// Set volume of the video.
     video.volume = volume;
     console.log("Video volume updated: " + video.volume);
+	// Update the volume text.
+	volumeText.innerHTML = volume * 100 + "%";
 }
 
 function SetOldSchoolStyle() {
