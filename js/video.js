@@ -51,8 +51,6 @@ function InitializeVideo() {
 	video.pause();
 	// Prevent video from looping.
 	video.removeAttribute('loop');
-	// Set the initial volume text.
-	volumeText.innerHTML = volume * 100 + "%"
 	// Output to console.
 	console.log("Good job opening the window");
 	console.log("Autoplay is set to false");
@@ -65,6 +63,8 @@ function PlayVideo() {
 	video.play();
 	// Set the volume of the video.
 	video.volume = volume;
+	// Set the initial volume text.
+	volumeText.innerHTML = volume * 100 + "%"
 }
 
 // Pauses the video.
